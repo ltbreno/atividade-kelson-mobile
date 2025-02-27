@@ -17,12 +17,12 @@ const CartaoApresentacao = () => {
         style={styles.profileImage}
       />
       <Text style={styles.name}>Júlio César</Text>
-      <Text style={styles.description}>Desenvolvedor Frontend | Apaixonado por tecnologia</Text>
+      <Text style={styles.description}>Desenvolvedor Full Stack | Apaixonado por tecnologia</Text>
       <View style={styles.contactButtons}>
-        <TouchableOpacity style={styles.button} onPress={() => openLink('https://github.com/JulioCAC')}>
+        <TouchableOpacity style={[styles.button, {backgroundColor: 'black'}]} onPress={() => openLink('https://github.com/JulioCAC')}>
           <Ionicons name="logo-github" size={24} color="white" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => openLink('https://www.linkedin.com/in/julio-cesar-alexandrino-costa-202100269/')}>
+        <TouchableOpacity style={[styles.button, {backgroundColor: '#1e90ff'}]} onPress={() => openLink('https://www.linkedin.com/in/julio-cesar-alexandrino-costa-202100269/')}>
           <Ionicons name="logo-linkedin" size={24} color="white" />
         </TouchableOpacity>
       </View>
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
       gap: 10,
     },
     button: {
-      backgroundColor: '#1e90ff',
       padding: 10,
       borderRadius: 10,
     },
