@@ -11,7 +11,7 @@ const CartaoPerfil = () => {
 
     Animated.timing(animation, {
       toValue: showDetails ? 0 : 1,
-      duration: 300, 
+      duration: 500, 
       useNativeDriver: false,
     }).start();
   };
@@ -35,7 +35,7 @@ const CartaoPerfil = () => {
       <Text style={styles.occupation}>Desenvolvedor Full Stack</Text>
 
       <TouchableOpacity style={styles.button} onPress={toggleDetails}>
-        <Ionicons name={showDetails ? "chevron-up" : "chevron-down"} size={24} color="white" />
+        <Ionicons name={showDetails ? "chevron-up" : "chevron-down"} size={18} color="white" />
         <Text style={styles.buttonText}>{showDetails ? 'Ver Menos' : 'Ver Mais'}</Text>
       </TouchableOpacity>
 
