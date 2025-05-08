@@ -1,18 +1,21 @@
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
-import { useState, useEffect, React } from 'react';
-
+import { useState, React, useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+import { getCursos } from '../service/CursoService'; 
 
 const HomeScreen = ({ navigation }) => {
-  const [cursos, setCursos] = useState([]);
+  const [itens, setItens] = useState([]);
 
-  useEffect(() => {
-    setCursos([
-      { id: '1', name: 'Curso de React Native', description: 'Aprenda a criar apps para iOS e Android' },
-      { id: '2', name: 'Curso de Java Spring Boot', description: 'Construa APIs robustas com Java e Spring' },
-      { id: '3', name: 'Curso de AWS', description: 'Domine os serviços da AWS e obtenha certificação' },
-      { id: '4', name: 'Curso de Python para Data Science', description: 'Analise dados com Python e Pandas' },
-    ]);
-  }, []);
+  const carregarCursos = async () => {
+    const cursos = await getCursos();
+    setItens(cursos);
+  }
+
+  useFocusEffect(
+    useCallback(() => { 
+      carregarCursos();
+    }, [])
+  );
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.itemContainer} onPress={() => navigation.navigate('Details', {  /* curso: item*/ itemId: item.id, name: item.name, description: item.description })}>
@@ -25,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.title}>📚Cursos Disponíveis</Text>
       <FlatList
-        data={cursos}
+        data={itens}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         contentContainerStyle={{ paddingBottom: 20 }}
