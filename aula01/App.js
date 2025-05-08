@@ -12,7 +12,7 @@ const App = () => {
     <ScrollView contentContainerStyle={styles.scrollViewContainer}>
       <View style={styles.container}>
       <View style={styles.exercicio}>
-          <Exercicio1 nome="Julio"/>
+          <Exercicio1 nome="Breno"/>
         </View>
         <View style={styles.exercicio}>
           <Exercicio2 />

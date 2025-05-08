@@ -16,13 +16,13 @@ const CartaoApresentacao = () => {
         source={{ uri: 'https://media.licdn.com/dms/image/v2/D4D03AQHN1deu7nIf5g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696898937428?e=1746057600&v=beta&t=Fn7YhJLTqbCxGItwvYzIkyTMulK3glKjqzvx7UZb7yM' }}
         style={styles.profileImage}
       />
-      <Text style={styles.name}>Júlio César</Text>
+      <Text style={styles.name}>Breno Lopes</Text>
       <Text style={styles.description}>Desenvolvedor Full Stack | Apaixonado por tecnologia</Text>
       <View style={styles.contactButtons}>
-        <TouchableOpacity style={[styles.button, {backgroundColor: 'black'}]} onPress={() => openLink('https://github.com/JulioCAC')}>
+        <TouchableOpacity style={[styles.button, {backgroundColor: 'black'}]} onPress={() => openLink('https://github.com/ltbreno')}>
           <Ionicons name="logo-github" size={24} color="white" />
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, {backgroundColor: '#1e90ff'}]} onPress={() => openLink('https://www.linkedin.com/in/julio-cesar-alexandrino-costa-202100269/')}>
+        <TouchableOpacity style={[styles.button, {backgroundColor: '#1e90ff'}]} onPress={() => openLink('https://www.linkedin.com/in/breno-tolentino/')}>
           <Ionicons name="logo-linkedin" size={24} color="white" />
         </TouchableOpacity>
       </View>

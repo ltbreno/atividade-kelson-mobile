@@ -28,10 +28,10 @@ const CartaoPerfil = () => {
   return (
     <View style={styles.card}>
       <Image
-        source={{ uri: 'https://media.licdn.com/dms/image/v2/D4D03AQHN1deu7nIf5g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696898937428?e=1746057600&v=beta&t=Fn7YhJLTqbCxGItwvYzIkyTMulK3glKjqzvx7UZb7yM' }}
+        source={{ uri: '' }}
         style={styles.profileImage}
       />
-      <Text style={styles.name}>Júlio César</Text>
+      <Text style={styles.name}>Breno Lopes</Text>
       <Text style={styles.occupation}>Desenvolvedor Full Stack</Text>
 
       <TouchableOpacity style={styles.button} onPress={toggleDetails}>
@@ -42,14 +42,14 @@ const CartaoPerfil = () => {
       <Animated.View style={[styles.details, { height: animatedHeight }]}>
         {showDetails && (
           <View style={styles.detailsContent}>
-            <Text style={styles.detailText}>Idade: 23 anos</Text>
+            <Text style={styles.detailText}>Idade: 22 anos</Text>
             <Text style={styles.detailText}>Localização: João Pessoa - PB</Text>
-            <Text style={styles.detailText}>Habilidades: ReactJs, ReactNative, SpringBoot</Text>
+            <Text style={styles.detailText}>Habilidades: GoLang, NestJS, Typescript</Text>
             <View style={styles.socialButtonsContainer}>
-              <TouchableOpacity style={[styles.socialButton, {backgroundColor: 'black'}]} onPress={() => openLink('https://github.com/JulioCAC')}>
+              <TouchableOpacity style={[styles.socialButton, {backgroundColor: 'black'}]} onPress={() => openLink('https://github.com/ltbreno')}>
                 <Ionicons name="logo-github" size={24} color="white" />
               </TouchableOpacity>
-              <TouchableOpacity style={[styles.socialButton, {backgroundColor: '#1e90ff'}]} onPress={() => openLink('https://www.linkedin.com/in/julio-cesar-alexandrino-costa-202100269/')}>
+              <TouchableOpacity style={[styles.socialButton, {backgroundColor: '#1e90ff'}]} onPress={() => openLink('https://www.linkedin.com/in/breno-tolentino/')}>
                 <Ionicons name="logo-linkedin" size={24} color="white" />
               </TouchableOpacity>
             </View>
